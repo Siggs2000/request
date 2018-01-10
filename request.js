@@ -351,6 +351,8 @@ Request.prototype.init = function (options) {
     self.path = '/'
   }
 
+  self.digestAuthPath = self.path
+
   // Auth must happen last in case signing is dependent on other headers
   if (options.aws) {
     self.aws(options.aws)
